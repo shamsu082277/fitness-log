@@ -1,6 +1,13 @@
 import type { IWorkout } from "@/types/workout";
+import Image from "next/image";
+
+import {
+    FaClock,
+    FaFire,
+    FaStar,
+} from "react-icons/fa";
+import WorkoutCard from "../shared/WorkoutCard";
 import { Oswald } from "next/font/google";
-import WorkoutCard from "@/components/shared/WorkoutCard";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -19,18 +26,19 @@ const getWorkouts = async () => {
 }
 
 
-const WorkoutsPage = async () => {
+const WorkoutList = async () => {
     const workouts = await getWorkouts();
 
     return (
-        <section className="bg-[#090A0D] py-10 sm:px-6 lg:px-8">
+        <section id="library" className="bg-[#090A0D] py-10 sm:px-6 lg:px-8">
             <div className="mx-auto px-6 max-w-7xl">
-                {/*TITLE*/}
+
+                {/* ================= TITLE ================= */}
                 <h2 className={`${oswald.className} font-bold mb-12 text-3xl tracking-tight text-white`}>
                     THE LIBRARY
                 </h2>
 
-                {/*  CARDS */}
+                {/* ================= CARDS ================= */}
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {workouts.map((workout: IWorkout) => (
                         <WorkoutCard key={workout.id} workout={workout} />
@@ -41,4 +49,4 @@ const WorkoutsPage = async () => {
     );
 };
 
-export default WorkoutsPage;
+export default WorkoutList;
