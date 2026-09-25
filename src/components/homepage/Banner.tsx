@@ -27,7 +27,7 @@ const Banner = () => {
                     </h1>
 
                     <p className="mt-5 max-w-xl text-base leading-7 text-[#9CA3AF] sm:text-[16px]">
-                        FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up.
+                        FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today&apos;s plan, and watch the week&apos;s work add up.
                     </p>
 
                     <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">

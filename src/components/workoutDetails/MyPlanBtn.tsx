@@ -37,12 +37,12 @@ const MyPlanButton = ({ workout }: { workout: IWorkout }) => {
                 className="flex cursor-pointer items-center gap-2 rounded-lg bg-[#C2F800] px-5 py-2.5 text-xs font-bold text-black transition hover:bg-[#B7E900] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[#C2F800]"
             >
                 <FaCalendarPlus />
-                Add to today's plan
+                Add to today&apos;s plan
             </button>
 
             {myPlan.length >= 5 && (
                 <p className="mt-2 text-xs text-[#858B97]">
-                    Today's plan is full. Maximum 5 lifts allowed.
+                    Today&apos;s plan is full. Maximum 5 lifts allowed.
                 </p>
             )}
         </div>
