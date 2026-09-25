@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/Vector.png";
-
 const Footer = () => {
   return (
     <footer className="bg-[#090A0D] text-[#6B7280]">
@@ -38,5 +37,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;
