@@ -3,8 +3,14 @@
 import PlanList from "@/components/shared/PlanList";
 import { WorkoutContext } from "@/context/WorkoutContext";
 import { IWorkout } from "@/types/workout";
+import { Oswald } from "next/font/google";
 import Link from "next/link";
 import { useContext, useState } from "react";
+
+const oswald = Oswald({
+    subsets: ["latin"],
+    weight: ["600", "700"],
+});
 
 type SortOption = "duration" | "calories" | "rating";
 
@@ -92,7 +98,7 @@ const MyPlan = () => {
 
         {/* ================= HEADER ================= */}
         <div>
-          <h1 className="font-[var(--font-oswald)] text-3xl font-bold uppercase tracking-tight sm:text-4xl">
+          <h1 className={`${oswald.className} text-3xl font-bold uppercase tracking-tight sm:text-4xl`}>
             My Plan
           </h1>
 
@@ -110,7 +116,7 @@ const MyPlan = () => {
               Exercises
             </p>
 
-            <p className="mt-1 font-[var(--font-oswald)] text-4xl font-semibold text-[#C2F800]">
+            <p className={`mt-1 ${oswald.className} text-4xl font-semibold text-[#CCFF00]`}>
               {allPlan.length}
             </p>
           </div>
@@ -121,7 +127,7 @@ const MyPlan = () => {
               Minutes
             </p>
 
-            <p className="mt-1 font-[var(--font-oswald)] text-4xl font-semibold text-white">
+            <p className={`mt-1 ${oswald.className} text-4xl font-semibold text-white`}>
               {totalMinutes}
             </p>
           </div>
@@ -132,7 +138,7 @@ const MyPlan = () => {
               Calories
             </p>
 
-            <p className="mt-1 font-[var(--font-oswald)] text-4xl font-semibold text-white">
+            <p className={`mt-1 ${oswald.className} text-4xl font-semibold text-white`}>
               {totalCalories}
             </p>
           </div>
@@ -149,7 +155,7 @@ const MyPlan = () => {
               onClick={() => setActiveTab("plan")}
               className={`cursor-pointer rounded-lg px-5 py-2 text-xs transition ${
                 activeTab === "plan"
-                  ? "border border-[#30343B] bg-[#20232A] font-medium text-[#C2F800]"
+                  ? "border border-[#30343B] bg-[#20232A] font-medium text-[#CCFF00]"
                   : "text-[#858B97] hover:text-white"
               }`}
             >
@@ -161,15 +167,13 @@ const MyPlan = () => {
               onClick={() => setActiveTab("saved")}
               className={`cursor-pointer rounded-lg px-6 py-2 text-xs transition ${
                 activeTab === "saved"
-                  ? "border border-[#30343B] bg-[#20232A] font-medium text-[#C2F800]"
+                  ? "border border-[#30343B] bg-[#20232A] font-medium text-[#CCFF00]"
                   : "text-[#858B97] hover:text-white"
               }`}
             >
               Saved
             </button>
           </div>
-
-          
 
           {/* Sort */}
           <div className="flex items-center gap-3">
@@ -179,7 +183,7 @@ const MyPlan = () => {
     value={searchTerm}
     onChange={(e) => setSearchTerm(e.target.value)}
     placeholder="Search workouts..."
-    className="w-full rounded-lg border border-[#292C31] bg-[#15171D] px-4 py-2 pl-10 text-xs text-white outline-none placeholder:text-[#858B97] focus:border-[#C2F800] sm:w-64"
+    className="w-full rounded-lg border border-[#292C31] bg-[#15171D] px-4 py-2 pl-10 text-xs text-white outline-none placeholder:text-[#858B97] focus:border-[#CCFF00] sm:w-64"
   />
 
   <svg
@@ -204,7 +208,7 @@ const MyPlan = () => {
               <select
                 value={sortBy}
                 onChange={handleSort}
-                className="cursor-pointer appearance-none rounded-lg border border-[#292C31] bg-[#15171D] py-2 pl-4 pr-9 text-xs text-white outline-none transition hover:border-[#3A3E46] focus:border-[#C2F800]"
+                className="cursor-pointer appearance-none rounded-lg border border-[#292C31] bg-[#15171D] py-2 pl-4 pr-9 text-xs text-white outline-none transition hover:border-[#3A3E46] focus:border-[#CCFF00]"
               >
                 <option value="duration">
                   Duration
@@ -258,7 +262,7 @@ const MyPlan = () => {
 
             <div className="text-center">
 
-              <h2 className="font-[var(--font-oswald)] text-xl font-bold uppercase text-white">
+              <h2 className={`${oswald.className} text-xl font-bold uppercase text-white`}>
                 Nothing Here Yet
               </h2>
 
@@ -267,7 +271,7 @@ const MyPlan = () => {
               </p>
 
               <Link href="/"
-                className="mt-10 cursor-pointer rounded-full bg-[#C2F800] px-6 py-2.5 text-xs font-bold text-black shadow-[0_8px_25px_rgba(194,248,0,0.12)] transition hover:bg-[#B7E900]"
+                className="mt-10 cursor-pointer rounded-full bg-[#CCFF00] px-6 py-2.5 text-xs font-bold text-black shadow-[0_8px_25px_rgba(194,248,0,0.12)] transition hover:bg-[#B7E900]"
               >
                 Go to workouts
               </Link>

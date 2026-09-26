@@ -6,7 +6,7 @@ const NotFound = () => {
       <div className="w-full max-w-lg text-center">
 
         {/* 404 */}
-        <p className="font-[var(--font-oswald)] text-8xl font-bold tracking-tight text-[#C2F800] sm:text-9xl">
+        <p className="font-[var(--font-oswald)] text-8xl font-bold tracking-tight text-[#CCFF00] sm:text-9xl">
           404
         </p>
 
@@ -24,7 +24,7 @@ const NotFound = () => {
         {/* Button */}
         <Link
           href="/"
-          className="mt-7 inline-flex cursor-pointer items-center rounded-lg bg-[#C2F800] px-6 py-3 text-xs font-bold uppercase text-black transition hover:bg-[#B7E900]"
+          className="mt-7 inline-flex cursor-pointer items-center rounded-lg bg-[#CCFF00] px-6 py-3 text-xs font-bold uppercase text-black transition hover:bg-[#B7E900]"
         >
           Back to Workouts
         </Link>

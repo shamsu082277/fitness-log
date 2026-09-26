@@ -1,7 +1,14 @@
 import { IWorkout } from '@/types/workout';
+import { Oswald } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaClock, FaFire, FaStar } from 'react-icons/fa';
+
+const oswald = Oswald({
+    subsets: ["latin"],
+    weight: ["600", "700"],
+});
+
 
 interface IWorkoutCardProps {
     workout: IWorkout
@@ -41,7 +48,7 @@ const WorkoutCard = ({ workout }: IWorkoutCardProps) => {
                     </div>
 
                     {/* ================= TITLE ================= */}
-                    <h3 className="text-lg font-black uppercase tracking-wide text-white">
+                    <h3 className={`text-lg ${oswald.className} font-black uppercase tracking-wide text-white`}>
                         {workout.name}
                     </h3>
 

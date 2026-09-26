@@ -1,6 +1,4 @@
-import React from "react";
 import Image from "next/image";
-
 import bannerImg from "@/assets/banner.png";
 import { Oswald } from "next/font/google";
 import { FaArrowDown } from "react-icons/fa";
@@ -17,8 +15,8 @@ const Banner = () => {
             <div className="mx-auto py-10 flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 overflow-hidden rounded-3xl bg-[#15171D] shadow-sm sm:px-10 lg:flex-row lg:px-14 lg:py-14">
 
                 {/* Content */}
-                <div className="w-full text-center  lg:w-2/3 lg:text-left">
-                    <span className="mb-4 inline-block px-4 py-2 text-sm font-semibold text-[#C2F800]">
+                <div className="w-full text-center lg:w-2/3 lg:text-left">
+                    <span className="mb-4 inline-block py-2 text-sm font-semibold text-[#CCFF00]">
                         WORKOUT LIBRARY
                     </span>
 
@@ -26,14 +24,14 @@ const Banner = () => {
                         TRAIN WITH INTENT. LOG EVERY SET.
                     </h1>
 
-                    <p className="mt-5 max-w-xl text-base leading-7 text-[#9CA3AF] sm:text-[16px]">
+                    <p className="mt-5 max-w-xl mx-auto lg:mx-0 text-base leading-7 text-[#9CA3AF] sm:text-[16px]">
                         FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today&apos;s plan, and watch the week&apos;s work add up.
                     </p>
 
                     <div className="mt-8 flex flex-col gap-4 sm:flex-row items-center sm:justify-center lg:justify-start">
                         <Link
                             href="#library"
-                            className="inline-flex max-w-6/12 cursor-pointer items-center gap-2 rounded-md bg-[#C2F800] px-6 py-3 text-xs font-black uppercase tracking-wide text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#B7E900] hover:shadow-lg"
+                            className="inline-flex max-w-6/12 cursor-pointer items-center gap-2 rounded-md bg-[#CCFF00] px-6 py-3 text-xs font-black uppercase tracking-wide text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#B7E900] hover:shadow-lg"
                         >
                             BROWSE WORKOUTS
                             <FaArrowDown className="text-[10px]" />
@@ -50,7 +48,7 @@ const Banner = () => {
                         src={bannerImg}
                         alt="Books Banner"
                         priority
-                        className="relative mx-auto w-full max-w-84 rounded-2xl object-cover transition duration-500 hover:scale-[1.02]"
+                        className="relative mx-auto lg:ml-auto lg:mr-0 w-full max-w-84 rounded-2xl object-cover transition duration-500 hover:scale-[1.02]"
                     />
                 </div>
             </div>

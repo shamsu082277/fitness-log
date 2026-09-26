@@ -3,6 +3,12 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import MyPlanButton from "@/components/workoutDetails/MyPlanBtn";
 import SavedButton from "@/components/workoutDetails/SavedBtn";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+    subsets: ["latin"],
+    weight: ["600", "700"],
+});
 
 interface IWorkoutDetailsProps {
     params: Promise<{
@@ -66,7 +72,7 @@ const WorkoutDetails = async ({ params }: IWorkoutDetailsProps) => {
                 <div className="flex flex-col">
 
                     {/* Title */}
-                    <h1 className="font-[var(--font-oswald)] text-3xl font-bold uppercase leading-none tracking-tight sm:text-4xl">
+                    <h1 className={`text-3xl ${oswald.className} font-bold uppercase leading-none tracking-tight sm:text-4xl`}>
                         {workout.name}
                     </h1>
 
@@ -80,7 +86,7 @@ const WorkoutDetails = async ({ params }: IWorkoutDetailsProps) => {
                         {workout.muscleGroups.map((muscle: string) => (
                             <span
                                 key={muscle}
-                                className="rounded-full bg-[#C2F800] px-3 py-1 text-[10px] font-bold text-black"
+                                className="rounded-full bg-[#CCFF00] px-3 py-1 text-[10px] font-bold text-black"
                             >
                                 {muscle}
                             </span>

@@ -2,10 +2,17 @@
 
 import { WorkoutContext } from '@/context/WorkoutContext';
 import { IWorkout } from '@/types/workout';
+import { Oswald } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { toast } from 'react-toastify';
+
+const oswald = Oswald({
+    subsets: ["latin"],
+    weight: ["600", "700"],
+});
+
 
 interface IPlanListProps {
     plan: IWorkout,
@@ -37,9 +44,9 @@ const PlanList = ({ plan, active }: IPlanListProps) => {
         setMyPlan(remainingMyPlan);
     };
     return (
-        <div className="flex items-center justify-between rounded-xl border border-[#292C31] bg-[#15171D] px-3 py-3">
+        <div className="flex flex-col md:flex-row items-center justify-between rounded-xl border border-[#292C31] bg-[#15171D] px-3 py-3">
             {/* Left side */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mb-5 md:mb-0">
 
                 {/* Image */}
                 <div className="h-14 w-28 overflow-hidden rounded-lg">
@@ -54,7 +61,7 @@ const PlanList = ({ plan, active }: IPlanListProps) => {
 
                 {/* Workout Info */}
                 <div>
-                    <h3 className="font-[var(--font-oswald)] text-sm font-bold uppercase text-white">
+                    <h3 className={`${oswald.className} text-sm font-bold uppercase text-white`}>
                         {plan.name}
                     </h3>
 
@@ -65,17 +72,17 @@ const PlanList = ({ plan, active }: IPlanListProps) => {
                     <div className="mt-1.5 flex items-center gap-3 text-[10px] text-[#C4C8D0]">
 
                         <span className="flex items-center gap-1">
-                            <span className="text-[#C2F800]">◷</span>
+                            <span className="text-[#CCFF00]">◷</span>
                             {plan.duration} min
                         </span>
 
                         <span className="flex items-center gap-1">
-                            <span className="text-[#C2F800]">♨</span>
+                            <span className="text-[#CCFF00]">♨</span>
                             {plan.caloriesBurned} kcal
                         </span>
 
                         <span className="flex items-center gap-1">
-                            <span className="text-[#C2F800]">★</span>
+                            <span className="text-[#CCFF00]">★</span>
                             {plan.rating}
                         </span>
 
@@ -84,14 +91,14 @@ const PlanList = ({ plan, active }: IPlanListProps) => {
             </div>
 
             {/* Right side */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
 
-                <Link href={`/workouts/${plan.id}`} className="cursor-pointer rounded-full border border-white px-4 py-2 text-[10px] text-white transition hover:border-[#C2F800] hover:text-white">
+                <Link href={`/workouts/${plan.id}`} className="cursor-pointer rounded-full border border-white px-4 py-2 text-[10px] text-white transition hover:border-[#CCFF00] hover:text-white">
                     View Details
                 </Link>
 
                 {
-                    active === "plan" && <button onClick={handleMarkAsDone} className="flex cursor-pointer items-center gap-1.5 rounded-full bg-[#C2F800] px-4 py-2 text-[10px] font-bold text-black transition hover:bg-[#B7E900]">
+                    active === "plan" && <button onClick={handleMarkAsDone} className="flex cursor-pointer items-center gap-1.5 rounded-full bg-[#CCFF00] px-4 py-2 text-[10px] font-bold text-black transition hover:bg-[#B7E900]">
                         <span>✓</span>
                         Mark as Done
                     </button>

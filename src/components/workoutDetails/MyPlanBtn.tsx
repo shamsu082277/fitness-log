@@ -34,7 +34,7 @@ const MyPlanButton = ({ workout }: { workout: IWorkout }) => {
             <button
                 onClick={handleMyPlan}
                 disabled={myPlan.length >= 5}
-                className="flex cursor-pointer items-center gap-2 rounded-lg bg-[#C2F800] px-5 py-2.5 text-xs font-bold text-black transition hover:bg-[#B7E900] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[#C2F800]"
+                className="flex cursor-pointer items-center gap-2 rounded-lg bg-[#CCFF00] px-5 py-2.5 text-xs font-bold text-black transition hover:bg-[#B7E900] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[#CCFF00]"
             >
                 <FaCalendarPlus />
                 Add to today&apos;s plan

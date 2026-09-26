@@ -63,7 +63,7 @@ http://localhost:3000
 
 ## 📸 Project Preview
 
-Add screenshots of the FitLog application here.
+![Fitness Log Screenshot](/public/preview.png)
 
 ---
 

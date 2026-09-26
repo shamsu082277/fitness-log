@@ -4,7 +4,7 @@ const Loading = () => {
       <div className="flex flex-col items-center gap-4">
 
         {/* Spinner */}
-        <div className="h-15 w-15 animate-spin rounded-full border-4 border-[#292C31] border-t-[#C2F800]" />
+        <div className="h-15 w-15 animate-spin rounded-full border-4 border-[#292C31] border-t-[#CCFF00]" />
 
         {/* Text */}
         <p className="font-[var(--font-oswald)] text-sm font-medium uppercase tracking-wider text-[#858B97]">

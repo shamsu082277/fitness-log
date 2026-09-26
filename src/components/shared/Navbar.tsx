@@ -5,6 +5,12 @@ import logo from "@/assets/logo.png";
 import Link from "next/link";
 import { WorkoutContext } from "@/context/WorkoutContext";
 import { usePathname } from "next/navigation";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+    subsets: ["latin"],
+    weight: ["600", "700"],
+});
 
 const Navbar = () => {
     const { myPlan, savedPlan } = useContext(WorkoutContext);
@@ -43,8 +49,8 @@ const Navbar = () => {
                             <Link
                                 href="/"
                                 className={`rounded-full px-4 py-2 transition ${pathname === "/"
-                                        ? "bg-[#1a2310] text-[#C2F800]"
-                                        : "text-white hover:bg-[#1a2310] hover:text-[#C2F800]"
+                                        ? "bg-[#1a2310] text-[#CCFF00]"
+                                        : "text-white hover:bg-[#1a2310] hover:text-[#CCFF00]"
                                     }`}
                             >
                                 Workouts
@@ -55,8 +61,8 @@ const Navbar = () => {
                             <Link
                                 href="/my-plan"
                                 className={`rounded-full px-4 py-2 transition ${pathname === "/my-plan"
-                                        ? "bg-[#1a2310] text-[#C2F800]"
-                                        : "text-white hover:bg-[#1a2310] hover:text-[#C2F800]"
+                                        ? "bg-[#1a2310] text-[#CCFF00]"
+                                        : "text-white hover:bg-[#1a2310] hover:text-[#CCFF00]"
                                     }`}
                             >
                                 My Plan
@@ -68,7 +74,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 cursor-pointer">
                         <Image src={logo} alt="FitLog Logo" className="h-10 w-10" />
-                        <span className="text-2xl font-bold text-[#FFFFFF]">
+                        <span className={`${oswald.className} text-2xl font-bold text-[#FFFFFF]`}>
                             FITLOG
                         </span>
                     </Link>
@@ -81,8 +87,8 @@ const Navbar = () => {
                             <Link
                                 href="/"
                                 className={`rounded-full px-4 py-2 transition ${pathname === "/"
-                                        ? "bg-[#1a2310] text-[#C2F800]"
-                                        : "text-white hover:bg-[#1a2310] hover:text-[#C2F800]"
+                                        ? "bg-[#1a2310] text-[#CCFF00]"
+                                        : "text-white hover:bg-[#1a2310] hover:text-[#CCFF00]"
                                     }`}
                             >
                                 Workouts
@@ -93,8 +99,8 @@ const Navbar = () => {
                             <Link
                                 href="/my-plan"
                                 className={`rounded-full px-4 py-2 transition ${pathname === "/my-plan"
-                                        ? "bg-[#1a2310] text-[#C2F800]"
-                                        : "text-white hover:bg-[#1a2310] hover:text-[#C2F800]"
+                                        ? "bg-[#1a2310] text-[#CCFF00]"
+                                        : "text-white hover:bg-[#1a2310] hover:text-[#CCFF00]"
                                     }`}
                             >
                                 My Plan

@@ -20,7 +20,7 @@ const Footer = () => {
           </Link>
 
           <p className="text-center text-xs text-gray-500 sm:text-right sm:text-sm">
-            © {new Date().getFullYear()} FitLog — Workout Library.
+            © {new Date().getFullYear()} | Shamsu Uddin | FitLog — Workout Library.
             <br className="sm:hidden" />
             <span className="sm:ml-1">
               Train hard, log honest.

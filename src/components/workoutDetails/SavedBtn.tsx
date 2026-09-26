@@ -27,7 +27,7 @@ const SavedButton = ({ workout }: { workout: IWorkout }) => {
 
 
     return (
-        <button onClick={handleSavedPlan} className="flex items-center gap-2 rounded-lg border border-[#343841] bg-transparent px-5 py-2.5 text-xs font-medium text-[#D1D5DB] transition hover:border-[#C2F800] hover:text-[#C2F800] cursor-pointer">
+        <button onClick={handleSavedPlan} className="flex items-center gap-2 rounded-lg border border-[#343841] bg-transparent px-5 py-2.5 text-xs font-medium text-[#D1D5DB] transition hover:border-[#CCFF00] hover:text-[#CCFF00] cursor-pointer">
             <FaBookmark />
             Save for later
         </button>

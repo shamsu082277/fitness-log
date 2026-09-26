@@ -34,9 +34,12 @@ const WorkoutList = async () => {
             <div className="mx-auto px-6 max-w-7xl">
 
                 {/* ================= TITLE ================= */}
-                <h2 className={`${oswald.className} font-bold mb-12 text-3xl tracking-tight text-white`}>
+                <h2 className={`${oswald.className} font-bold mb-4 text-3xl tracking-tight text-white`}>
                     THE LIBRARY
                 </h2>
+                <p className="max-w-xl mx-auto md:mx-0 mb-10 text-base text-[#9CA3AF] sm:text-[16px]">
+                    Twelve lifts covering every major muscle group
+                </p>
 
                 {/* ================= CARDS ================= */}
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
