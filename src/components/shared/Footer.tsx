@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/Vector.png";
+import logo from "@/assets/footerLogo.png";
 const Footer = () => {
   return (
     <footer className="bg-[#090A0D] text-[#6B7280]">
@@ -15,12 +15,8 @@ const Footer = () => {
             <Image
               src={logo}
               alt="FitLog Logo"
-              className="h-10 w-10 object-contain"
+              className="w-[120] object-contain"
             />
-
-            <span className="text-2xl font-bold tracking-wide text-white">
-              FITLOG
-            </span>
           </Link>
 
           <p className="text-center text-xs text-gray-500 sm:text-right sm:text-sm">

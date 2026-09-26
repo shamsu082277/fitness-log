@@ -12,35 +12,45 @@ interface IWorkoutDetailsProps {
 
 const getWorkouts = async () => {
     try {
-        const response = await fetch("https://api.abcz.workers.dev/api/fitlog");
+        const response = await fetch(
+            "https://api.abcz.workers.dev/api/fitlog",
+            {
+                cache: "force-cache",
+            }
+        );
+
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error("Error fetching books data:", error);
-        return []
+        console.error("Error fetching workouts:", error);
+        return [];
     }
+};
+
+export async function generateStaticParams() {
+    const workouts = await getWorkouts();
+
+    return workouts.map((workout: IWorkout) => ({
+        id: workout.id.toString(),
+    }));
 }
 
-
 const WorkoutDetails = async ({ params }: IWorkoutDetailsProps) => {
-
     const { id } = await params;
+
     const workoutData = await getWorkouts();
 
     const workout = workoutData.find(
-        (excercise: IWorkout) => excercise.id === Number(id)
+        (exercise: IWorkout) => exercise.id === Number(id)
     );
 
-
-    // If book doesn't exist
     if (!workout) {
         notFound();
     }
 
-
     return (
         <main className="min-h-screen bg-[#0C0D10] px-4 py-10 text-white sm:px-6 lg:px-8">
-            <div className="mx-auto px-6 grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[1fr_1fr] lg:gap-11">
+            <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-[1fr_1fr] lg:gap-11">
 
                 {/* ================= IMAGE ================= */}
                 <div className="relative h-[520px] overflow-hidden rounded-xl sm:h-[580px] lg:h-[563px]">
@@ -66,9 +76,8 @@ const WorkoutDetails = async ({ params }: IWorkoutDetailsProps) => {
                     </p>
 
                     {/* Muscle Groups */}
-                    {/* Muscle Groups */}
                     <div className="mt-4 flex flex-wrap gap-2">
-                        {workout.muscleGroups.map((muscle:string) => (
+                        {workout.muscleGroups.map((muscle: string) => (
                             <span
                                 key={muscle}
                                 className="rounded-full bg-[#C2F800] px-3 py-1 text-[10px] font-bold text-black"
@@ -77,6 +86,7 @@ const WorkoutDetails = async ({ params }: IWorkoutDetailsProps) => {
                             </span>
                         ))}
                     </div>
+
                     {/* ================= INFO CARD ================= */}
                     <div className="mt-6 overflow-hidden rounded-xl border border-[#292C31] bg-[#15171D]">
 
@@ -165,18 +175,19 @@ const WorkoutDetails = async ({ params }: IWorkoutDetailsProps) => {
                         </h2>
 
                         <ol className="mt-3 space-y-3">
-                            {
-                                workout.instructions.map((instruction: string, index: number) =>
+                            {workout.instructions.map(
+                                (instruction: string, index: number) => (
                                     <div key={index}>
                                         <li className="flex gap-3 text-xs leading-5 text-[#B0B5BF]">
                                             <span>{index + 1}.</span>
+
                                             <span>
                                                 {instruction}
                                             </span>
                                         </li>
                                     </div>
                                 )
-                            }
+                            )}
                         </ol>
                     </div>
 

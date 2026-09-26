@@ -14,7 +14,7 @@ const oswald = Oswald({
 const Banner = () => {
     return (
         <section className="min-h-screen bg-[#0C0D10] py-12 sm:px-6 lg:px-8">
-            <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 overflow-hidden rounded-3xl bg-[#15171D] shadow-sm sm:px-10 lg:flex-row lg:px-14 lg:py-14">
+            <div className="mx-auto py-10 flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 overflow-hidden rounded-3xl bg-[#15171D] shadow-sm sm:px-10 lg:flex-row lg:px-14 lg:py-14">
 
                 {/* Content */}
                 <div className="w-full text-center  lg:w-2/3 lg:text-left">
@@ -30,13 +30,10 @@ const Banner = () => {
                         FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today&apos;s plan, and watch the week&apos;s work add up.
                     </p>
 
-                    <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                        {/* <button className="btn rounded-lg border-none bg-[#C2F800] px-7 py-6 text-base font-bold text-black shadow-md transition-all duration-300 hover:bg-[#24be0f] hover:shadow-lg hover:-translate-y-0.5">
-             BROWSE WORKOUTS
-            </button> */}
+                    <div className="mt-8 flex flex-col gap-4 sm:flex-row items-center sm:justify-center lg:justify-start">
                         <Link
                             href="#library"
-                            className="inline-flex cursor-pointer items-center gap-2 rounded-md bg-[#C2F800] px-6 py-3 text-xs font-black uppercase tracking-wide text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#B7E900] hover:shadow-lg"
+                            className="inline-flex max-w-6/12 cursor-pointer items-center gap-2 rounded-md bg-[#C2F800] px-6 py-3 text-xs font-black uppercase tracking-wide text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#B7E900] hover:shadow-lg"
                         >
                             BROWSE WORKOUTS
                             <FaArrowDown className="text-[10px]" />

@@ -262,12 +262,12 @@ const MyPlan = () => {
                 Nothing Here Yet
               </h2>
 
-              <p className="mt-1 text-xs text-[#858B97]">
+              <p className="mt-1 mb-6 text-xs text-[#858B97]">
                 Browse the library and add a lift to get today moving.
               </p>
 
               <Link href="/"
-                className="mt-6 cursor-pointer rounded-full bg-[#C2F800] px-6 py-2.5 text-xs font-bold text-black shadow-[0_8px_25px_rgba(194,248,0,0.12)] transition hover:bg-[#B7E900]"
+                className="mt-10 cursor-pointer rounded-full bg-[#C2F800] px-6 py-2.5 text-xs font-bold text-black shadow-[0_8px_25px_rgba(194,248,0,0.12)] transition hover:bg-[#B7E900]"
               >
                 Go to workouts
               </Link>
