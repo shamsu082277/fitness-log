@@ -59,7 +59,7 @@ http://localhost:3000
 
 ## 🌐 Project Live Link
 
-[Visit FitLog Live Website](YOUR_LIVE_WEBSITE_URL)
+[Visit FitLog Live Website](https://fitness-log-project.netlify.app/)
 
 ## 📸 Project Preview
 
